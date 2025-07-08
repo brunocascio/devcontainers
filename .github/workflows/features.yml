@@ -8,7 +8,7 @@ jobs:
   features:
     runs-on: ubuntu-latest
     permissions:
-      packages: read
+      packages: write
       contents: write
       pull-requests: write
     steps:
@@ -18,5 +18,3 @@ jobs:
       with:
         publish-features: "true"
         base-path-to-features: "./features"
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
